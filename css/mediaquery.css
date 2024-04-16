@@ -1,0 +1,66 @@
+/* navbar and hero */
+@media (width < 990px) {
+    nav ul {
+        position: absolute;
+        width: 100%;
+        background-color: var(--secondary-color);
+        color: var(--extra-light);
+        left: 0;
+        top: 100%;
+        text-align: center;
+        box-shadow: 0px 0px 1px 3px var(--primary-color);
+    }
+
+    nav .logo {
+        max-width: 130px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+    section {
+        padding: 100px 10% 60px;
+    }
+    .about {
+        grid-template-columns: 1fr;
+        padding: 50px 3% 60px;
+    }
+    .about-img {
+        text-align: center;
+    }
+    .about-text p {
+        color: var(--extra-light);
+        font-size: 1rem;
+        line-height: 30px;
+        margin-bottom: 2rem;
+        text-align: center;
+        padding: 0 10%;
+    }
+    /* .services-content {
+        grid-template-columns: repeat(2, minmax(350px, auto));
+    } */
+    .contact, .request {
+        grid-template-columns: 1fr;
+    }
+    .contact-text h2, .request-text h2 {
+        padding-top: 20%;
+    }
+    
+    .contact-form form, .request-form form {
+         padding-top: 0;
+    }
+
+}
+
+@media (width < 480px) {
+    section {
+        padding: 130px 10% 60px;
+    }
+    nav ul li {
+        margin: 10px;
+    }
+}

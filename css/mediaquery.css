@@ -49,9 +49,13 @@
     }
 
     .box h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
-    
+    .box p {
+        font-size: 0.5rem;
+        line-height: 20px;
+    }
+
 
     /* .services-content {
         grid-template-columns: repeat(2, minmax(350px, auto));

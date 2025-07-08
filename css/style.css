@@ -283,7 +283,7 @@ button {
 .box {
     color: var(--white);
     padding: 45px;
-    height: 100%;
+    height: auto;
     /* background: linear-gradient(#c0042697, #d32b448f); */
     background-color: var(--secondary-color-dark);
     border-top: 5px solid transparent;

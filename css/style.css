@@ -242,7 +242,7 @@ button {
 .about-img img {
     height: auto;
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
     border-radius: 100%;
 }
 
@@ -272,7 +272,8 @@ button {
 
 .services-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    /* grid-template-columns: repeat(auto-fit, minmax(350px, auto)); */
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     text-align: center;
     gap: 2rem;
@@ -282,7 +283,7 @@ button {
 .box {
     color: var(--white);
     padding: 45px;
-    height: 400px;
+    height: 500px;
     /* background: linear-gradient(#c0042697, #d32b448f); */
     background-color: var(--secondary-color-dark);
     border-top: 5px solid transparent;

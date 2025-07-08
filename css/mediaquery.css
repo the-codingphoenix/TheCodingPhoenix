@@ -43,7 +43,7 @@
     /* .services-content {
         grid-template-columns: repeat(2, minmax(350px, auto));
     } */
-    .contact, .request {
+    .contact, .request, .services-content{
         grid-template-columns: 1fr;
     }
     .contact-text h2, .request-text h2 {

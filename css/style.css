@@ -422,9 +422,11 @@ button {
 
 .contact {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 1fr;
     align-items: center;
-    gap: 3rem;
+    /* gap: 3rem; */
+    padding-top: 15%;
 }
 
 .contact-text h4{
@@ -490,7 +492,8 @@ button {
 
 .contact-form form {
     position: relative;
-    padding-top: 10%;
+    /* padding-top: 10%; */
+    padding-top: 5%;
 }
 
 .contact-form form input:focus {
@@ -550,10 +553,12 @@ button {
 
 /* Request */
 .request {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+     display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 1fr;
     align-items: center;
-    gap: 3rem;
+    /* gap: 3rem; */
+    padding-top: 15%;
 }
 
 .request-text h4{
@@ -577,7 +582,7 @@ button {
 
 .request-form form {
     position: relative;
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
 .request-form form input:focus {

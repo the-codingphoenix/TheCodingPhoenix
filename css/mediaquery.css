@@ -40,16 +40,13 @@
         text-align: center;
         padding: 0 10%;
     }
-   .box {
-        height: auto;
-   }
    .box img {
         width: 100px;
         height: 100px;
     }
 
     .box h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
     .box p {
         font-size: 0.5rem;
@@ -63,12 +60,12 @@
     .contact, .request, .services-content{
         grid-template-columns: 1fr;
     }
-    .contact-text h2, .request-text h2 {
-        padding-top: 20%;
+    .contact, .request {
+        padding-top: 50%;
     }
     
     .contact-form form, .request-form form {
-         padding-top: 0;
+         padding-top: 5%;
     }
 
 }

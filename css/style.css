@@ -74,7 +74,7 @@ nav ul li:hover a {
 .nav-btn {
     background-color: var(--primary-color-dark);
     color: var(--extra-light);
-    font-size: 16px;
+    font-size: 1rem;
     padding: .75rem;
     border: 0;
     outline: 0;
@@ -143,9 +143,10 @@ button {
 .btn-dark {
     background-color: var(--primary-color-dark);
     color: var(--extra-light);
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 20px;
     border-radius: 30px;
     box-shadow: 2px 2px 2px var(--extra-light);
+    font-size: .9rem;
 }
 
 .btn-dark:hover {
@@ -214,19 +215,19 @@ button {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 40px; /* More spacing between image and text */
 }
 
 .about-text h4 {
     margin: 10px 0;
     color: var(--primary-color);
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.2rem;
+    font-weight: 500;
     text-align: center;
 }
 
 .about-text h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     color: var(--white);
     text-align: center;
 }
@@ -242,8 +243,10 @@ button {
 .about-img img {
     height: auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     border-radius: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 .about .btn-container {
@@ -282,7 +285,7 @@ button {
 
 .box {
     color: var(--white);
-    padding: 45px;
+    padding: 20px 10px 30px ;
     height: auto;
     /* background: linear-gradient(#c0042697, #d32b448f); */
     background-color: var(--secondary-color-dark);
@@ -299,14 +302,14 @@ button {
 }
 
 .box img {
-    width: 120px;
-    height: 120px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     box-shadow: 2px 2px 5px var(--white);
 }
 
 .box h3 {
-    font-size: 24px;
+    font-size: 1.2rem;
     font-weight: 600;
     margin: 15px 0;
     transition: all .40s ease;
@@ -321,8 +324,8 @@ button {
 
 .box p {
     color: var(--extra-light);
-    font-size: 1rem;
-    line-height: 30px;
+    font-size: .9rem;
+    line-height: 20px;
 }
 
 /* Projects */
@@ -647,11 +650,11 @@ footer span .brand {
 }
 footer span {
     color: #fff;
-    font-size: .8rem;
+    font-size: .7rem;
 }
 footer i {
-    font-size: 1.3rem;
-    margin-right: 10px;
+    font-size: .8rem;
+    margin-right: 5px;
 }
 footer i:hover {
     color: var(--primary-color);

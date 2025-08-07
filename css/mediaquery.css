@@ -46,7 +46,7 @@
     }
 
     .box h3 {
-        font-size: 16px;
+        font-size: 1rem;
     }
     .box p {
         font-size: .8rem;
@@ -57,22 +57,57 @@
     /* .services-content {
         grid-template-columns: repeat(2, minmax(350px, auto));
     } */
-    .contact, .request, .services-content{
+    .contact, .request{
         grid-template-columns: 1fr;
     }
     .contact, .request {
-        padding-top: 50%;
+        padding-top: 20%;
     }
     
     .contact-form form, .request-form form {
-         padding-top: 15%;
+         padding-top: 5%;
+    }
+    
+    footer span {
+        color: #fff;
+        font-size: .7rem;
+    }
+    footer i {
+        font-size: .7rem;
     }
 
 }
 
+@media (width < 690px) {
+    /* .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        padding: 10px 0;
+        border-top: 1px solid var(--extra-light);
+        border-bottom: 1px solid var(--extra-light);
+    }
+    .about-text p {
+        padding: 0 5%;
+    } */
+     .services-content {
+        grid-template-columns: 1fr;
+     }
+     .contact, .request {
+        padding-top: 40%;
+    }
+     
+}
+
 @media (width < 480px) {
     section {
-        padding: 130px 10% 60px;
+        padding: 100px 10% 60px;
     }
     nav ul li {
         margin: 10px;

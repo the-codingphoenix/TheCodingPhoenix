@@ -1,4 +1,13 @@
 /* navbar and hero */
+@media (width < 1200px) {
+    .about {
+        grid-template-columns: 1fr;
+        padding: 50px 3% 60px;
+    }
+    .about-img {
+        text-align: center;
+    }
+}
 @media (width < 990px) {
     nav ul {
         position: absolute;
@@ -24,13 +33,6 @@
     }
     section {
         padding: 100px 10% 60px;
-    }
-    .about {
-        grid-template-columns: 1fr;
-        padding: 50px 3% 60px;
-    }
-    .about-img {
-        text-align: center;
     }
     .about-text p {
         color: var(--extra-light);

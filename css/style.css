@@ -139,7 +139,7 @@ nav ul li:hover a {
 
 .btn-container {
     display: flex;
-    /* gap: 1rem; */
+    /* gap: .6rem; */
     margin-top: 20px;
 }
 
@@ -241,7 +241,7 @@ button {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
-    text-align: justify;
+    text-align: left;
     gap: 40px; /* More spacing between image and text */
 }
 
@@ -876,7 +876,7 @@ footer span {
     font-size: .7rem;
 }
 footer i {
-    font-size: .8rem;
+    font-size: 1rem;
     margin-right: 5px;
 }
 footer i:hover {

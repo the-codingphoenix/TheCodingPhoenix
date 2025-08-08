@@ -3,10 +3,17 @@
     .about {
         grid-template-columns: 1fr;
         padding: 50px 3% 60px;
+        text-align: center;
     }
     .about-img {
         text-align: center;
     }
+    .about .btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: .6rem;
+    }
+
     .reviews__grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (width < 990px) {
@@ -75,7 +82,7 @@
         font-size: .7rem;
     }
     footer i {
-        font-size: .7rem;
+        font-size: .8rem;
     }
 
 }
@@ -115,7 +122,7 @@
     }
     .hero .btn-container {
         flex-direction: column;
-        gap: .5rem;
+        gap: .6rem;
         margin: 10px 0 20px;
     }
      .hero h1 {

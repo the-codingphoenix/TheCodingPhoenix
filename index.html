@@ -20,7 +20,7 @@
     <body>
         <!-- navbar -->
         <nav>
-            <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
+            <a href="#home"><img class="logo" src="images/logo.png" alt="Logo"></a>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
@@ -31,17 +31,18 @@
         </nav>
 
         <!-- hero -->
-        <div class="hero" id="home">
-            <h1><span>Unrivaled</span> <span>Excellence</span></h1> 
-            <h2>In All Tasks</h2>
+        <div class="hero" id="home" aria-label="Hero Section">
+            <h1><span>Unrivaled Excellence</span><br><span>For Churches & Businesses</span></h1> 
+            <p>Custom Websites for Churches, Small Businesses, and Entrepreneurs</p>
             <div class="btn-container">
-                <a href="request.html"><button class="btn-dark">Request Service <img src="images/request.png" alt="request"></button></a>
+                <a href="request.html"><button class="btn-dark">Request Services</button></a>
+                <a href="#projects"><button class="btn-dark btn2">View Projects</button></a>
             </div>
-            <p>Freelance professional ready to assist</p>
+            <p></p>
         </div>
         
         <!-- about -->
-        <section class="about" id="about">
+        <section class="about" id="about" aria-label="About Me Section">
             <div class="about-img">
                 <img src="images/profile.png" alt="Profile Image">
             </div>
@@ -50,13 +51,14 @@
                 <h4>I'm Happy To Help With Your Next Project</h4>
                 <p>Hi, I’m Melissa M. Buie — the heart and hands behind The Coding Phoenix.<br><br>As the founder of The Coding Phoenix, I specialize in designing, revamping, and streamlining websites for purpose-driven entrepreneurs, ministries, and small business owners. Whether you're just starting out or looking to breathe new life into your brand, I’m here to bring your vision to life — with clarity, creativity, and care.<br><br>Why “The Coding Phoenix”? Because just like the phoenix rises from the ashes, I believe your business can be reborn with the right digital presence. Every website I create is infused with strategy, heart, and faith — helping you build with confidence and purpose.<br><br>I’m not just here to deliver a pretty site. I’m here to walk alongside you, support your goals, and help you build something that lasts. Let’s build something meaningful — together.</p>
                 <div class="btn-container">
-                    <a href="contact.html"><button class="btn-dark">Contact Me</button></a>
+                    <a href="request.html"><button class="btn-dark">Request Services</button></a>
+                    <a href="#projects"><button class="btn-dark btn2">View Projects</button></a>
                 </div>
             </div>
         </section>
 
         <!-- services -->
-        <section class="services" id="service">
+        <section class="services" id="service" aria-label="Services Section">
             <div class="main-text">
                 <h2>My Services</h2>
                 <h4>Exceeding Your Expectations</h4>
@@ -97,45 +99,205 @@
         </section>
 
         <!-- Projects -->
-        <section class="projects" id="projects">
+        <section class="projects" id="projects" aria-label="Projects Section">
             <div class="main-text">
                 <h2>My Projects</h2>
                 <h4>Some Of My Frontend & Landing Page Designs</h4>
             </div>
             <div class="projects-content">
                 <div class="row">
-                    <img src="./images/project1.png" alt="Project One">
-                    <h3>Portfolio Website</h3>
-                    <a href="https://the-codingphoenix.github.io/portfolio_website/" class="btn">Live Demo</a>
-                    <!-- <a href="https://github.com/the-codingphoenix/portfolio_website" class="btn btn1">Github</a> -->
-                </div>
-                <div class="row">
-                    <img src="./images/project2.png" alt="Project Two" width="150px">
-                    <h3>Responsive Website</h3>
-                    <a href="https://the-codingphoenix.github.io/Automotive/" class="btn">Live Demo</a>
-                    <!-- <a href="https://github.com/the-codingphoenix/AllThingsAutomotive" class="btn btn1">Github</a> -->
-                </div>
-                <div class="row">
-                    <img src="./images/project3.png" alt="Project Three" width="150px">
-                    <h3>Landing Page</h3>
-                    <a href="https://the-codingphoenix.github.io/LandingPage/" class="btn">Live Demo</a>
-                    <!-- <a href="https://github.com/the-codingphoenix/LandingPage" class="btn btn1">Github</a> -->
-                </div>
-                <div class="row">
                     <img src="./images/project4.png" alt="Project Four" width="150px">
-                    <h3>Responsive Website</h3>
-                    <a href="https://www.destinycogbf.org/" class="btn">Live Demo</a>
+                    <h3>Destiny COGBF Website Redesign</h3>
+                    <p>A modern, mobile-responsive redesign built on the Finalweb platform, improving navigation, visual appeal, and ease of sharing for the congregation.</p>
+                    <a href="https://www.destinycogbf.org/" class="btn" target="_blank">Live Demo</a>
                     <!-- <a href="https://github.com/the-codingphoenix/LandingPage" class="btn btn1">Github</a> -->
                 </div>
                 <div class="row">
                     <img src="./images/project5.png" alt="Project Five" width="150px">
-                    <h3>Responsive Website</h3>
-                    <a href="https://www.jonestemplecogbf.org/" class="btn">Live Demo</a>
+                    <h3>Jones Temple COGBF Website Redesign</h3>
+                    <p>Custom Finalweb redesign focused on clarity, speed, and accessibility—making events, resources, and giving simpler for members and visitors.</p>
+                    <a href="https://www.jonestemplecogbf.org/" class="btn" target="_blank">Live Demo</a>
+                    <!-- <a href="https://github.com/the-codingphoenix/LandingPage" class="btn btn1">Github</a> -->
+                </div>
+                <div class="row">
+                    <img src="./images/project1.png" alt="Project One">
+                    <h3>The Coding Phoenix First Website</h3>
+                    <p>A clean, single-page design with multiple sections, built to highlight services, skills, and projects with engaging animations and smooth navigation.</p>
+                    <a href="https://the-codingphoenix.github.io/portfolio_website/" class="btn" target="_blank">Live Demo</a>
+                    <!-- <a href="https://github.com/the-codingphoenix/portfolio_website" class="btn btn1">Github</a> -->
+                </div>
+                <div class="row">
+                    <img src="./images/project2.png" alt="Project Two" >
+                    <h3>All Things Automotive Small Business Website</h3>
+                    <p>A sleek, one-page responsive site with animations, designed to showcase services and make booking appointments fast and intuitive for customers.</p>
+                    <a href="https://the-codingphoenix.github.io/Automotive/" class="btn" target="_blank">Live Demo</a>
+                    <!-- <a href="https://github.com/the-codingphoenix/AllThingsAutomotive" class="btn btn1">Github</a> -->
+                </div>
+                <div class="row">
+                    <img src="./images/trucking.png" alt="Project Two">
+                    <h3>Lynford Enterprise Small Business Website</h3>
+                    <p>A one-page responsive design with animations, built to highlight services, improve usability, and provide a polished online presence.</p>
+                    <a href="https://the-codingphoenix.github.io/lynford-enterprise/#" class="btn" target="_blank">Live Demo</a>
+                    <!-- <a href="https://github.com/the-codingphoenix/AllThingsAutomotive" class="btn btn1">Github</a> -->
+                </div>
+                <div class="row">
+                    <img src="./images/project3.png" alt="Project Three" >
+                    <h3>The Coding Phoenix Landing Page</h3>
+                    <p>A bold, single-section landing page with animation, designed to capture leads, build anticipation, and drive engagement for upcoming services.</p>
+                    <a href="https://the-codingphoenix.github.io/LandingPage/" class="btn" target="_blank">Live Demo</a>
                     <!-- <a href="https://github.com/the-codingphoenix/LandingPage" class="btn btn1">Github</a> -->
                 </div>
             </div>
         </section>
-    <!-- Footer -->
+    
+    <!-- Reusable SVG symbols (place once near top of <body>) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+        <!-- Star icon -->
+        <symbol id="icon-star" viewBox="0 0 24 24">
+        <path d="M12 2.5l3.09 6.26 6.9.99-5 4.87 1.18 6.88L12 18.77 5.83 21.5l1.18-6.88-5-4.87 6.9-.99L12 2.5z"/>
+        </symbol>
+        <!-- Check icon -->
+        <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="M9 16.2l-3.5-3.5-1.4 1.4L9 19 20.3 7.7l-1.4-1.4z"/>
+        </symbol>
+    </defs>
+    </svg>
+
+    <!-- Reviews -->
+    <section class="reviews" aria-label="Client Reviews">
+        <div class="reviews__container">
+            <h2 class="reviews__heading">
+                Loved by churches and small businesses.
+            </h2>
+            <p class="reviews__sub">Websites that rise above — fast, clear, and built to convert. </p>
+
+            <div class="reviews__grid">
+                <!-- All Things Automotive (archived on GitHub Pages) TIP: set --thumb to a screenshot image url -->
+                <a class="review-card review-card--link" href="https://the-codingphoenix.github.io/Automotive/" target="_blank" rel="noopener"
+                style="--thumb:url('/images/allthingsautomotive.png')" aria-label="Open the All Things Automotive Website (archived)">
+                    <div class="review-card__rating" aria-hidden="true">
+                        <svg class="star"><use href="#icon-star"></use></svg>
+                        <svg class="star"><use href="#icon-star"></use></svg>
+                        <svg class="star"><use href="#icon-star"></use></svg>
+                        <svg class="star"><use href="#icon-star"></use></svg>
+                        <svg class="star"><use href="#icon-star"></use></svg>
+                    </div>
+                    <span class="sr-only">Rated 5 out of 5</span>
+                    <p class="review-card__text">
+                        “The website made it easy for customers to book meetings, and we saw more people using it right away.”
+                    </p>
+                    <div class="review-card__author">
+                    — John, Owner of All Things Automotive
+                    <!-- <span style="font-size:0.85em; color:var(--text-light)"> (archived site)</span> -->
+                    </div>
+                </a>
+                <!-- Lynford Enterprises (archived on GitHub Pages) -->
+                <a class="review-card review-card--link"
+                    href="https://the-codingphoenix.github.io/lynford-enterprise/"
+                    target="_blank" rel="noopener"
+                    style="--thumb: url('/images/thumb-lynford.jpg');"
+                    aria-label="Open the Lynford Enterprises website (archived)">
+                    <div class="review-card__rating" aria-hidden="true">
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    </div>
+                    <span class="sr-only">Rated 5 out of 5</span>
+                    <p class="review-card__text">
+                    “We loved how easy it was to navigate and use the website. Everything was clear and simple for our customers.”
+                    </p>
+                    <div class="review-card__author">
+                    — Manager, Lynford Enterprises
+                    <!-- <span style="font-size:0.85em; color:var(--text-light)"> (business no longer active)</span> -->
+                    </div>
+                </a>
+
+                <!-- Jones Temple COGBF -->
+                <a class="review-card review-card--link"
+                    href="https://www.jonestemplecogbf.org/"
+                    target="_blank" rel="noopener"
+                    style="--thumb: url('/images/thumb-jones-temple.jpg');"
+                    aria-label="Open the Jones Temple COGBF website">
+                    <div class="review-card__rating" aria-hidden="true">
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    </div>
+                    <span class="sr-only">Rated 5 out of 5</span>
+                    <p class="review-card__text">
+                    “The site looks great and is much easier to use and share. We love it!”
+                    </p>
+                    <div class="review-card__author">— Pastor & Members, Jones Temple COGBF</div>
+                </a>
+
+                <!-- Destiny COGBF -->
+                <a class="review-card review-card--link"
+                    href="https://www.destinycogbf.org/"
+                    target="_blank" rel="noopener"
+                    style="--thumb: url('/images/thumb-destiny.jpg');"
+                    aria-label="Open the Destiny COGBF website">
+                    <div class="review-card__rating" aria-hidden="true">
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    <svg class="star"><use href="#icon-star"></use></svg>
+                    </div>
+                    <span class="sr-only">Rated 5 out of 5</span>
+                    <p class="review-card__text">
+                    “The new design makes it so simple for our congregation to access resources and share the site with others.”
+                    </p>
+                    <div class="review-card__author">— Pastor & Members, Destiny COGBF</div>
+                </a>
+
+            </div>
+        </div>
+    
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-label="Call to action">
+        <div class="cta__container">
+            <div class="cta__text">
+            <div class="cta__eyebrow">The Coding Phoenix</div>
+            <h2 class="cta__title">Church & small-business websites that rise above</h2>
+            <p class="cta__desc">
+                Get a modern, fast site with clear messaging and conversions in mind. We’ll audit your site and send a short action plan—free, no pressure.
+            </p>
+
+            <div class="cta__checks">
+                <div class="cta__check">
+                <svg aria-hidden="true"><use href="#icon-check"></use></svg>
+                <span>Mobile-first, lightning fast</span>
+                </div>
+                <div class="cta__check">
+                <svg aria-hidden="true"><use href="#icon-check"></use></svg>
+                <span>Built for giving, bookings, & leads</span>
+                </div>
+                <div class="cta__check">
+                <svg aria-hidden="true"><use href="#icon-check"></use></svg>
+                <span>SEO basics & analytics included</span>
+                </div>
+            </div>
+
+            <div class="cta__actions">
+                <a href="request.html" class="btn-dark btn">Request Service</a>
+                <a href="#projects" class="btn-dark btn--ghost btn">See Church & Small Biz Work</a>
+            </div>
+            </div>
+        </div>
+    </section>
+        
+    
+    
+    
+    
+        <!-- Footer -->
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
           <div class="col-md-4 d-flex align-items-center">
@@ -150,7 +312,7 @@
             <li><a class="text-white" href="mailto:admin@thecodingphoenix.com"><i class="fa-solid fa-envelope"></i></a></li>
           </ul>
         </footer>
-      </div>
+    </div>
 
      <!-- Bootstrap JS -->
      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

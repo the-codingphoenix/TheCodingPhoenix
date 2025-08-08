@@ -7,6 +7,7 @@
     .about-img {
         text-align: center;
     }
+    .reviews__grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (width < 990px) {
     nav ul {
@@ -25,14 +26,14 @@
     }
 
     .hero h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .hero h2 {
         font-size: 2rem;
     }
     section {
-        padding: 100px 10% 60px;
+        padding: 110px 10% 60px;
     }
     .about-text p {
         color: var(--extra-light);
@@ -62,13 +63,12 @@
     .contact, .request{
         grid-template-columns: 1fr;
     }
-    .contact, .request {
-        padding-top: 20%;
-    }
+    
     
     .contact-form form, .request-form form {
          padding-top: 5%;
     }
+    .cta__container { flex-direction: column; align-items: flex-start; }
     
     footer span {
         color: #fff;
@@ -101,17 +101,49 @@
      .services-content {
         grid-template-columns: 1fr;
      }
-     .contact, .request {
-        padding-top: 40%;
-    }
-     
+    .hero { align-items: flex-start; }
+    .hero h1, .hero h2, .hero p, .btn-container { text-align: left; }
+    .reviews__grid { grid-template-columns: 1fr; }
 }
 
 @media (width < 480px) {
-    section {
-        padding: 100px 10% 60px;
-    }
+    /* section {
+        padding: 120px 10% 60px;
+    } */
     nav ul li {
         margin: 10px;
     }
+    .hero .btn-container {
+        flex-direction: column;
+        gap: .5rem;
+        margin: 10px 0 20px;
+    }
+     .hero h1 {
+        margin-top: 280px;
+    }
+    .contact, .request {
+            margin-top: 150px;
+    }
+    
+}
+
+@media (width < 380px) {
+
+    nav ul li {
+        margin: 10px;
+    }
+    .hero .btn-container {
+        flex-direction: column;
+        gap: .5rem;
+        margin: 10px 0 20px;
+    }
+    
+     .hero h1 {
+        font-size:3rem;
+        margin-top: 300px;
+    }
+    .contact, .request {
+            margin-top: 150px;
+    }
+    
 }

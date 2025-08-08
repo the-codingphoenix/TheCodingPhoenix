@@ -33,7 +33,7 @@ a {
 }
 
 section {
-    padding: 160px 16% 90px;
+    padding: 100px 16% 90px;
     box-shadow: 0px 0px 1px 2px var(--primary-color);
 }
 
@@ -78,15 +78,17 @@ nav ul li:hover a {
     padding: .75rem;
     border: 0;
     outline: 0;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 2px 2px 2px var(--extra-light);
     cursor: pointer;
+    transition: transform 0.15s ease;
 }
 
-.nav-btn:hover {
+.nav-btn:hover, .nav-btn:focus {
     background-color: var(--extra-light);
     color: var(--primary-color-dark);
     box-shadow: 3px 3px 2px var(--primary-color-dark);
+    transform: translateY(1px);
 }
 
 /* hero */
@@ -108,27 +110,38 @@ nav ul li:hover a {
 .hero h1 {
     margin-top: 100px;
     color: var(--extra-light);
-    width: 600px;
+    /* was width:600px; -> that was causing cutoffs */
+    max-width: 20ch;               /* ~20 characters per line */
     font-size: 5rem;
-    line-height: 6rem;
+    line-height: 1.1;
 }
 
-.hero h2 {
-    color: var(--extra-light);
-    font-size: 3rem;
+.hero h2,
+.hero .sub {
+  color: var(--extra-light);
+  font-size: 3rem;
+  margin-top: 10px;
+  max-width: 20ch;
 }
+
 
 .hero p {
-    max-width: 360px;
+    /* max-width: 360px; */
     font-weight: 500;
     color: var(--extra-light);
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-transform: capitalize;
 }
 
+.type-wrap { display: inline-block; }
+.caret { display:inline-block; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
 .btn-container {
-    margin: 20px 0;
+    display: flex;
+    gap: .2rem;
+    margin-top: 20px;
 }
+
 
 button {
     border: 0;
@@ -144,15 +157,17 @@ button {
     background-color: var(--primary-color-dark);
     color: var(--extra-light);
     padding: 10px 10px 10px 20px;
-    border-radius: 30px;
+    border-radius: 10px;
     box-shadow: 2px 2px 2px var(--extra-light);
     font-size: .9rem;
+    transition: transform 0.15s ease;
 }
-
 .btn-dark:hover {
     background-color: var(--extra-light);
     color: var(--primary-color-dark);
     box-shadow: 3px 3px 2px var(--primary-color-dark);
+    border: 2px solid transparent;
+    transform: translateY(1px);
 }
 
 .btn-dark img {
@@ -166,6 +181,16 @@ button {
 .btn-dark:hover img {
     background-color: var(--primary-color);
 }
+.btn2 {
+    background-color: transparent;
+    box-shadow: 2px 2px 2px var(--primary-color);
+    border: 1px solid var(--primary-color);
+    transition: transform 0.15s ease;
+}
+.btn2:hover {
+    border: none;
+    transform: translateY(1px);
+}
 
 /* Hero Animation */
 .hero h1 span {
@@ -178,7 +203,7 @@ button {
 }  
 
 .hero h1 span:first-child {
-    animation: textcolor1 2s linear infinite alternate;
+    animation: textcolor1 5s linear infinite alternate;
 }
 
 @keyframes textcolor1 {
@@ -194,7 +219,7 @@ button {
 }
 
 .hero h1 span:last-child {
-    animation: textcolor2 2s linear infinite alternate;
+    animation: textcolor2 5s linear infinite alternate;
 }
 
 @keyframes textcolor2 {
@@ -292,11 +317,11 @@ button {
     border-top: 5px solid transparent;
     transition: all .40s ease;
     box-shadow: 5px 5px 6px var(--primary-color-dark);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .box:hover {
-    transform: scale(1.01) translate(-5px);
+    /* transform: scale(1.01) translate(-5px); */
     /* border-top: 5px solid var(--extra-light); */
     box-shadow: 5px 5px 6px var(--extra-light);
 }
@@ -336,6 +361,7 @@ button {
     align-items: center;
     gap: 2rem;
     margin-top: 2rem;
+    text-align: center;
 }
 
 .row img {
@@ -350,23 +376,24 @@ button {
 
 .row {
     padding: 10px;
-    background-color: var(--text-light);
-    color: var(--secondary-color-dark);
+    background-color: var(--secondary-color);
+    color: var(--text-light);
     border-radius: 0.5rem;
     transition: all .40s ease;
     box-shadow: 3px 3px 6px var(--primary-color);
 }
 
-.main-row {
+/* .main-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
-}
+} */
 
 .row h3 {
     font-size: 20px;
     font-weight: 700;
+    color: var(--white);
 }
 
 .row h6 {
@@ -382,39 +409,43 @@ button {
 
 .row:hover {
     background-color: var(--secondary-color);
-    border-top: 5px solid var(--primary-color);
+    /* border-top: 5px solid var(--primary-color);
     transform: scale(1.01) translateY(-5px);
-    transition: all .40s ease;
-    cursor: pointer;
+    transition: all .40s ease; */
 }
 
 .row:hover h3 {
     color: var(--primary-color);
 }
 
-.row:hover a {
+/* .row:hover a {
     color: var(--text-light);
 }
 
+.row:hover p {
+    color: var(--text-light);
+} */
 .row .btn {
     padding: 5px 10px;
     float: right;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-size: .9rem;font-weight: 500;
     background-color: var(--primary-color);
     color: var(--extra-light);
     border: 1px solid var(--primary-color);
     transition: all .40s ease;
     box-shadow: 2px 2px 2px 2px var(--secondary-color);
+    cursor: pointer;
 }
 
 .row:hover .btn {
     box-shadow: 2px 2px 4px var(--text-light);
-    background-color: transparent;
+    color: var(--white);
 }
 
 .btn:hover {
     transform: scale(1.01) translateY(-5px);
+    background-color: transparent;
 }
 
 .row .btn1{
@@ -429,7 +460,7 @@ button {
     grid-template-columns: 1fr;
     align-items: center;
     /* gap: 3rem; */
-    padding-top: 15%;
+    margin-top: 100px;
 }
 
 .contact-text h4{
@@ -561,7 +592,7 @@ button {
     grid-template-columns: 1fr;
     align-items: center;
     /* gap: 3rem; */
-    padding-top: 15%;
+    margin-top: 100px;
 }
 
 .request-text h4{
@@ -644,6 +675,203 @@ button {
 }
 
 
+/* ===== Utilities ===== */
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+
+/* ===== Reviews (The Coding Phoenix) ===== */
+.reviews {
+  background: var(--secondary-color);
+  color: var(--white);
+}
+.reviews__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  /* padding: 4rem 1rem; */
+}
+.reviews__heading {
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+.reviews__sub {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.reviews__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Card base */
+.review-card {
+  background: var(--secondary-color-dark);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional subtle screenshot background (set with --thumb on the element) */
+.review-card::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--thumb, none); /* e.g., url('/img/project.jpg') */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.22;               /* subtle by default */
+  filter: blur(2px) brightness(0.6);
+  transform: scale(1.03);
+  transition: opacity .2s ease, transform .2s ease;
+  pointer-events: none;
+}
+
+.review-card--link:hover::before {
+  opacity: 0.3;
+  transform: scale(1.06);
+}
+
+/* Make whole card clickable + micro-interactions */
+.review-card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  position: relative;
+}
+.review-card--link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+  border-color: rgba(255,255,255,0.15);
+}
+.review-card--link:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 4px;
+}
+
+/* External link icon */
+.review-card--link::after {
+  content: "↗";
+  font-size: 0.85rem;
+  position: absolute;
+  top: 0.75rem; right: 0.75rem;
+  opacity: 0;
+  transform: translateY(-3px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.review-card--link:hover::after {
+  opacity: 0.8;
+  transform: translateY(0);
+}
+
+/* Stars */
+.review-card__rating {
+  position: relative;
+  z-index: 1; /* above background */
+  display: inline-flex;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.review-card .star {
+  width: 1.1rem; height: 1.1rem;
+  fill: var(--primary-color);
+}
+
+/* Text */
+.review-card__text {
+  position: relative; z-index: 1;
+  color: var(--extra-light);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.35); /* legibility over thumb */
+}
+.review-card__author {
+  position: relative; z-index: 1;
+  font-weight: 600;
+}
+
+/* ===== CTA (The Coding Phoenix) ===== */
+.cta {
+   background-image: linear-gradient(rgba(49, 10, 10, 0.815), rgba(10, 10, 10, 0.801)), url("../images/bg2.jpg");
+    background-size: cover;
+    background-position: center;;
+  color: var(--white);
+}
+.cta__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  /* padding: 3rem 1rem; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cta__text { max-width: 720px; }
+.cta__eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--extra-light);
+  opacity: 0.9;
+  margin-bottom: 0.25rem;
+}
+.cta__title {
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.cta__desc {
+  color: var(--extra-light);
+  margin-bottom: 1rem;
+}
+.cta__checks {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0.75rem 0 1.25rem;
+}
+.cta__check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cta__check span {
+    color: var(--extra-light);
+}
+.cta__check svg { width: 1rem; height: 1rem; fill: var(--primary-color-dark); opacity: 0.9; }
+
+.cta__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  font-weight: 500;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.btn:active { transform: translateY(1px); }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--white);
+  border-color: var(--extra-light);
+  /* box-shadow: 2px 2px 2px var(--secondary-color-dark); */
+}
+/* .btn--ghost:hover {
+  background: var(--primary-color-dark);
+  box-shadow: 0 8px 20px var(--extra-light);
+  color: var(--extra-light);
+} */
 /* Footer */
 footer span .brand {
     color: var(--primary-color);

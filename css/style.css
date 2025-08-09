@@ -141,7 +141,7 @@ nav ul li:hover a {
 
 .btn-container {
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
     margin-top: 20px;
 }
 
@@ -159,7 +159,7 @@ button {
 .btn-dark {
     background-color: var(--primary-color-dark);
     color: var(--extra-light);
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px var(--extra-light);
     font-size: .9rem;
@@ -252,6 +252,7 @@ button {
     color: var(--primary-color);
     font-size: 1.2rem;
     font-weight: 500;
+    font-family: var(--body);
 }
 
 .about-text h2 {

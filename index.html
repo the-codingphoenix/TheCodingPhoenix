@@ -1,26 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>The Coding Phoenix</title>
-        <!-- favicon -->
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-        <!-- remix icon -->
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
-        <!-- fontawesome -->
-        <script src="https://kit.fontawesome.com/f3726a4d63.js" crossorigin="anonymous"></script>
+
+        <!-- Preconnect to speed up 3rd-party requests -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Favicon -->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+        <!-- OPTIONAL: Inline tiny critical CSS for above-the-fold (add your first paint rules here) -->
+        <style>
+            /* critical.css (very small!): header layout, hero text, top nav, base typography, etc. */
+        </style>
+
+        <!-- Load CSS asynchronously (with <noscript> fallback) -->
+        <!-- Remix Icon -->
+        <link rel="preload" as="style"
+                href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+                onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" crossorigin></noscript>
+
         <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <!-- my css -->
-        <link rel="stylesheet" href="css/style.css">
-        <!-- my mediaquery -->
-        <link rel="stylesheet" href="css/mediaquery.css">
+        <link rel="preload" as="style"
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+                onload="this.onload=null;this.rel='stylesheet'"
+                integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+                crossorigin>
+        <noscript>
+            <link rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+                integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+                crossorigin>
+        </noscript>
+
+        <!-- Your CSS -->
+        <link rel="preload" as="style" href="css/style.css"
+                onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+
+        <link rel="preload" as="style" href="css/mediaquery.css"
+                onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="css/mediaquery.css"></noscript>
+
+        <!-- Google Fonts (swap to avoid blocking) -->
+        <!-- Replace the family with what you use -->
+        <link rel="preload" as="style"
+                href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+                onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+        </noscript>
+
+        <!-- Font Awesome (defer so it doesn't block) -->
+        <script defer src="https://kit.fontawesome.com/f3726a4d63.js" crossorigin="anonymous"></script>
     </head>
+
     <body>
         <!-- navbar -->
         <nav>
-            <a href="#home"><img class="logo" src="images/logo.png" alt="Logo"></a>
+            <a href="#home"><img class="logo" src="images/logo.webp" alt="Logo"></a>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
@@ -44,7 +88,7 @@
         <!-- about -->
         <section class="about" id="about" aria-label="About Me Section">
             <div class="about-img">
-                <img src="images/profile.png" alt="Profile Image">
+                <img src="images/MelissaBuie.webp" alt="Picture of Melissa M Buie">
             </div>
             <div class="about-text">
                 <h2>About Me</h2>
@@ -65,7 +109,7 @@
             </div>
             <div class="services-content">
                 <div class="box">
-                    <img src="./images/frontend.png" alt="Responsive Website Design Image" width="100">
+                    <img src="./images/frontend.webp" alt="Website Design Icon" >
                     <h3>Website Design & Redesign</h3>
                     <p>Custom, mobile-ready websites and updates that align with your brand, vision, and goals.</p>
                     <p><strong>Starting at $90</strong></p>
@@ -73,23 +117,15 @@
                 </div>
 
                 <div class="box">
-                    <img src="./images/landingpage.png" alt="Landing Page Creation Icon" width="100">
+                    <img src="./images/landingpageicon.webp" alt="Landing Page Creation Icon">
                     <h3>Landing Page Creation</h3>
                     <p>I design sleek landing pages that drive results—perfect for offers, events, and sign-ups.</p>
                     <p><strong>Starting at $100</strong></p>
                     <a href="request.html" class="btn-dark">Request Service</a>
                 </div>
 
-                <!-- <div class="box">
-                    <img src="./images/update.png" alt="Website Edits Icon" width="100">
-                    <h3>Website Fixes & Redesign</h3>
-                    <p>From quick fixes to full makeovers, I enhance your site’s look, speed, and usability.</p>
-                    <p><strong>Starting at $100</strong></p>
-                    <a href="request.html" class="btn-dark">Request Service</a>
-                </div> -->
-
                 <div class="box">
-                    <img src="./images/va.png" alt="Virtual Assistance Icon" width="100">
+                    <img src="./images/va.webp" alt="Web Support Icon">
                     <h3>Web & Admin Support</h3>
                     <p>Professional virtual assistance for website updates, content management, and digital admin tasks.</p>
                     <p><strong>$17/hr</strong></p>
@@ -106,46 +142,40 @@
             </div>
             <div class="projects-content">
                 <div class="row">
-                    <img src="./images/project4.png" alt="Project Four" width="150px">
+                    <img src="./images/destinycogbf.webp" alt="Image of Destiny COGBF Website Redesign">
                     <h3>Destiny COGBF Website Redesign</h3>
                     <p>A modern, mobile-responsive redesign built on the Finalweb platform, improving navigation, visual appeal, and ease of sharing for the congregation.</p>
                     <a href="https://www.destinycogbf.org/" class="btn" target="_blank">Live Demo</a>
-                    <!-- <a href="https://github.com/the-codingphoenix/LandingPage" class="btn btn1">Github</a> -->
                 </div>
                 <div class="row">
-                    <img src="./images/project5.png" alt="Project Five" width="150px">
+                    <img src="./images/jonestemplecogbf.webp" alt="Image of Jones Temple COGBF Website Redesign">
                     <h3>Jones Temple COGBF Website Redesign</h3>
                     <p>Custom Finalweb redesign focused on clarity, speed, and accessibility—making events, resources, and giving simpler for members and visitors.</p>
                     <a href="https://www.jonestemplecogbf.org/" class="btn" target="_blank">Live Demo</a>
-                    <!-- <a href="https://github.com/the-codingphoenix/LandingPage" class="btn btn1">Github</a> -->
                 </div>
                 <div class="row">
-                    <img src="./images/project1.png" alt="Project One">
-                    <h3>The Coding Phoenix First Website</h3>
+                    <img src="./images/portfolio.webp" alt="Image of The Coding Phoenix Portfolio Website">
+                    <h3>The Coding Phoenix Portfolio Website</h3>
                     <p>A clean, single-page design with multiple sections, built to highlight services, skills, and projects with engaging animations and smooth navigation.</p>
                     <a href="https://the-codingphoenix.github.io/portfolio_website/" class="btn" target="_blank">Live Demo</a>
-                    <!-- <a href="https://github.com/the-codingphoenix/portfolio_website" class="btn btn1">Github</a> -->
                 </div>
                 <div class="row">
-                    <img src="./images/project2.png" alt="Project Two" >
+                    <img src="./images/automotive.webp" alt="Image of All Things Automotive Small Business Website" >
                     <h3>All Things Automotive Small Business Website</h3>
                     <p>A sleek, one-page responsive site with animations, designed to showcase services and make booking appointments fast and intuitive for customers.</p>
                     <a href="https://the-codingphoenix.github.io/Automotive/" class="btn" target="_blank">Live Demo</a>
-                    <!-- <a href="https://github.com/the-codingphoenix/AllThingsAutomotive" class="btn btn1">Github</a> -->
                 </div>
                 <div class="row">
-                    <img src="./images/trucking.png" alt="Project Two">
+                    <img src="./images/lynford.webp" alt="Image of Lynford Enterprise Small Business Website">
                     <h3>Lynford Enterprise Small Business Website</h3>
                     <p>A one-page responsive design with animations, built to highlight services, improve usability, and provide a polished online presence.</p>
                     <a href="https://the-codingphoenix.github.io/lynford-enterprise/#" class="btn" target="_blank">Live Demo</a>
-                    <!-- <a href="https://github.com/the-codingphoenix/AllThingsAutomotive" class="btn btn1">Github</a> -->
                 </div>
                 <div class="row">
-                    <img src="./images/project3.png" alt="Project Three" >
+                    <img src="./images/landingpage.webp" alt="Image of The Coding Phoenix Landing Page" >
                     <h3>The Coding Phoenix Landing Page</h3>
                     <p>A bold, single-section landing page with animation, designed to capture leads, build anticipation, and drive engagement for upcoming services.</p>
                     <a href="https://the-codingphoenix.github.io/LandingPage/" class="btn" target="_blank">Live Demo</a>
-                    <!-- <a href="https://github.com/the-codingphoenix/LandingPage" class="btn btn1">Github</a> -->
                 </div>
             </div>
         </section>
@@ -175,7 +205,7 @@
             <div class="reviews__grid">
                 <!-- All Things Automotive (archived on GitHub Pages) TIP: set --thumb to a screenshot image url -->
                 <a class="review-card review-card--link" href="https://the-codingphoenix.github.io/Automotive/" target="_blank" rel="noopener"
-                style="--thumb:url('/images/allthingsautomotive.png')" aria-label="Open the All Things Automotive Website (archived)">
+                style="--thumb:url('/images/automotive.webp')" aria-label="Open the All Things Automotive Website (archived)">
                     <div class="review-card__rating" aria-hidden="true">
                         <svg class="star"><use href="#icon-star"></use></svg>
                         <svg class="star"><use href="#icon-star"></use></svg>
@@ -196,7 +226,7 @@
                 <a class="review-card review-card--link"
                     href="https://the-codingphoenix.github.io/lynford-enterprise/"
                     target="_blank" rel="noopener"
-                    style="--thumb: url('/images/trucking.png');"
+                    style="--thumb: url('/images/lynford.webp');"
                     aria-label="Open the Lynford Enterprises website (archived)">
                     <div class="review-card__rating" aria-hidden="true">
                     <svg class="star"><use href="#icon-star"></use></svg>
@@ -219,7 +249,7 @@
                 <a class="review-card review-card--link"
                     href="https://www.jonestemplecogbf.org/"
                     target="_blank" rel="noopener"
-                    style="--thumb: url('/images/project5.png');"
+                    style="--thumb: url('/images/jonestemplecogbf.webp');"
                     aria-label="Open the Jones Temple COGBF website">
                     <div class="review-card__rating" aria-hidden="true">
                     <svg class="star"><use href="#icon-star"></use></svg>
@@ -239,7 +269,7 @@
                 <a class="review-card review-card--link"
                     href="https://www.destinycogbf.org/"
                     target="_blank" rel="noopener"
-                    style="--thumb: url('/images/project4.png');"
+                    style="--thumb: url('/images/destinycogbf.webp');"
                     aria-label="Open the Destiny COGBF website">
                     <div class="review-card__rating" aria-hidden="true">
                     <svg class="star"><use href="#icon-star"></use></svg>
@@ -308,17 +338,14 @@
             <li><a class="text-white" href="https://www.facebook.com/TheCodingPhoenix"><i class="fa-brands fa-facebook"></i></a></li>
             <li><a class="text-white" href="https://www.instagram.com/thecodingphoenix/"><i class="fa-brands fa-instagram"></i></a></li>
             <li><a class="text-white" href="tel:352-325-3745"><i class="fa-solid fa-phone"></i></a></li>
-            <li><a class="text-white" href="https://wa.me/17275805822"><i class="fa-brands fa-whatsapp"></i></a></li> 
             <li><a class="text-white" href="mailto:admin@thecodingphoenix.com"><i class="fa-solid fa-envelope"></i></a></li>
           </ul>
         </footer>
     </div>
 
-     <!-- Bootstrap JS -->
-     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
- 
-    <!-- Scroll Reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js" defer></script>
+
     </body>
 </html>

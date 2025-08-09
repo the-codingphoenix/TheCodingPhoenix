@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --primary-color: #da042a;
@@ -9,6 +8,8 @@
     --extra-light: #f8f7fd;
     --white: #ffffff;
     --max-width: 1200px;
+    --headings: 'Montserrat', sans-serif;
+    --body: 'Poppins', sans-serif;
 }
 
 * {
@@ -23,7 +24,7 @@ html, body {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--body);
     background-color: var(--secondary-color);
 }
 
@@ -95,7 +96,7 @@ nav ul li:hover a {
 .hero {
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(16, 15, 15, 0.747), rgba(0, 0, 0, 0.766)), url("../images/bg.jpeg");
+    background-image: linear-gradient(rgba(16, 15, 15, 0.747), rgba(0, 0, 0, 0.766)), url("../images/bg.webp");
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
@@ -113,6 +114,7 @@ nav ul li:hover a {
     /* was width:600px; -> that was causing cutoffs */
     max-width: 20ch;               /* ~20 characters per line */
     font-size: 5rem;
+    font-family: var(--headings);
     line-height: 1.1;
 }
 
@@ -255,6 +257,7 @@ button {
 .about-text h2 {
     font-size: 2.3rem;
     color: var(--white);
+    font-family: var(--headings);
 }
 
 .about-text p {
@@ -283,6 +286,7 @@ button {
 
 .main-text h2 {
     font-size: 2.5rem;
+    font-family: var(--headings);
     color: var(--white);
     margin-bottom: 10px;
 }
@@ -449,7 +453,7 @@ button {
 
 /* Contact */
 
-.contact {
+.contact, .request{
     display: grid;
     /* grid-template-columns: repeat(2, 1fr); */
     grid-template-columns: 1fr;
@@ -458,24 +462,10 @@ button {
     margin-top: 100px;
 }
 
-.contact-text h4{
-    margin: 15px 0;
-    color: var(--primary-color);
-    font-size: 1.25rem;
-    font-weight: 600;
-}
+.contact-text h4,.request-text h4{margin:15px 0;color:var(--primary-color);font-size:1.25rem;font-weight:600}
+.contact-text h2,.request-text h2{font-size:2.5rem;color:var(--white);font-family:var(--headings)}
+.contact-text p,.request-text p{color:var(--extra-light);font-size:1rem;line-height:30px;margin-bottom:2rem}
 
-.contact-text h2 {
-    font-size: 2.5rem;
-    color: var(--white);
-}
-
-.contact-text p {
-    color: var(--extra-light);
-    font-size: 1rem;
-    line-height: 30px;
-    margin-bottom: 2rem;
-}
 
 .contact-list {
     margin-bottom: 3rem;
@@ -519,154 +509,45 @@ button {
     background-color: var(--primary-color);
 }
 
-.contact-form form {
-    position: relative;
-    /* padding-top: 10%; */
-    padding-top: 5%;
+.contact-form form,
+.request-form form{position:relative;padding-top:5%}
+
+
+.contact-form form input:focus,
+.request-form form input:focus{background-color:var(--primary-color);color:var(--extra-light)}
+
+.contact-form form input,
+.contact-form form textarea,
+.request-form form input,
+.request-form form textarea{
+  border:none;outline:none;width:100%;padding:18px;background-color:var(--text-light);
+  color:var(--secondary-color);font-size:1rem;font-weight:600;margin-bottom:.5rem;
+  border-radius:.5rem;border-bottom:2px solid var(--primary-color)
 }
 
-.contact-form form input:focus {
-    background-color: var(--primary-color);
-    color: var(--extra-light);
+.contact-form form input:hover,
+.contact-form form textarea:hover,
+.request-form form input:hover,
+.request-form form textarea:hover{
+  transform:scale(1.01) translate(-5px);border-top:2px solid var(--primary-color);
+  background-color:var(--primary-color-dark);color:var(--white)
 }
 
-.contact-form form input, form textarea {
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: 18px;
-    background-color: var(--text-light);
-    color: var(--secondary-color);
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
-    border-bottom: 2px solid var(--primary-color);
-}
+.contact-form form textarea,
+.request-form form textarea{resize:none;height:150px}
 
-.contact-form form input:hover, form textarea:hover {
-    transform: scale(1.01) translate(-5px);
-    border-top: 2px solid var(--primary-color);
-    background-color: var(--primary-color-dark);
-    color: var(--white);
-}
+.contact-form form ::placeholder,
+.request-form form ::placeholder{font-size:.9rem;letter-spacing:1px;color:var(--secondary-color-dark)}
 
-.contact-form textarea {
-    resize: none;
-    height: 150px;
+.contact-form form .send,
+.request-form form .send{
+  display:inline-block;font-size:17px;font-weight:500;background-color:var(--primary-color);
+  color:var(--white);box-shadow:3px 3px 3px var(--text-light);transition:all .40s ease;cursor:pointer
 }
-
-.contact-form form ::placeholder {
-    font-size: .9rem;
-    letter-spacing: 1px;
-    color: var(--secondary-color-dark);
-}
-
-.contact-form form .send {
-    display: inline-block;
-    font-size: 17px;
-    font-weight: 500;
-    background-color: var(--primary-color);
-    color: var(--white);
-    box-shadow: 3px 3px 3px var(--text-light);
-    transition: all .40s ease;
-    cursor: pointer;
-}
-
-.contact-form form .send:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color-dark);
-    box-shadow: 3px 3px 3px var(--primary-color);
-    border-top: 0;
-}
-
-/* Request */
-.request {
-     display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-columns: 1fr;
-    align-items: center;
-    /* gap: 3rem; */
-    margin-top: 100px;
-}
-
-.request-text h4{
-    margin: 15px 0;
-    color: var(--primary-color);
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
-.request-text h2 {
-    font-size: 2.5rem;
-    color: var(--white);
-}
-
-.request-text p {
-    color: var(--extra-light);
-    font-size: 1rem;
-    line-height: 30px;
-    margin-bottom: 2rem;
-}
-
-.request-form form {
-    position: relative;
-    padding-top: 5%;
-}
-
-.request-form form input:focus {
-    background-color: var(--primary-color);
-    color: var(--extra-light);
-}
-
-.request-form form input, form textarea {
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: 18px;
-    background-color: var(--text-light);
-    color: var(--secondary-color);
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    border-radius: 0.5rem;
-    border-bottom: 2px solid var(--primary-color);
-}
-
-.request-form form input:hover, form textarea:hover {
-    transform: scale(1.01) translate(-5px);
-    border-top: 2px solid var(--primary-color);
-    background-color: var(--primary-color-dark);
-    color: var(--white);
-}
-
-.request-form textarea {
-    resize: none;
-    height: 150px;
-}
-
-.request-form form ::placeholder {
-    font-size: .9rem;
-    letter-spacing: 1px;
-    color: var(--secondary-color-dark);
-}
-
-.request-form form .send {
-    display: inline-block;
-    font-size: 17px;
-    font-weight: 500;
-    background-color: var(--primary-color);
-    color: var(--white);
-    box-shadow: 3px 3px 3px var(--text-light);
-    transition: all .40s ease;
-    cursor: pointer;
-}
-
-.request-form form .send:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color-dark);
-    box-shadow: 3px 3px 3px var(--primary-color);
-    border-top: 0;
+.contact-form form .send:hover,
+.request-form form .send:hover{
+  background-color:var(--secondary-color);color:var(--primary-color-dark);
+  box-shadow:3px 3px 3px var(--primary-color);border-top:0
 }
 
 
@@ -692,6 +573,7 @@ button {
   font-size: 2.3rem;
   margin-bottom: 0.5rem;
   color: var(--white);
+  font-family: var(--headings);
 }
 .reviews__sub {
   color: var(--primary-color);
@@ -795,7 +677,7 @@ button {
 
 /* ===== CTA (The Coding Phoenix) ===== */
 .cta {
-   background-image: linear-gradient(rgba(49, 10, 10, 0.815), rgba(10, 10, 10, 0.801)), url("../images/bg2.jpg");
+   background-image: linear-gradient(rgba(49, 10, 10, 0.815), rgba(10, 10, 10, 0.801)), url("../images/bg2.webp");
     background-size: cover;
     background-position: center;;
   color: var(--white);
@@ -820,6 +702,7 @@ button {
 }
 .cta__title {
   font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-family: var(--headings);
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }

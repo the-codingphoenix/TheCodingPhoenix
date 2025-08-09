@@ -13,7 +13,6 @@
         align-items: center;
         gap: .6rem;
     }
-
     .reviews__grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (width < 990px) {
@@ -27,26 +26,13 @@
         text-align: center;
         box-shadow: 0px 0px 1px 3px var(--primary-color);
     }
-
-    nav .logo {
-        max-width: 130px;
-    }
-
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
+    nav .logo { max-width: 130px;}
+    .hero h1 {font-size: 3.5rem;}
+    .hero h2 {font-size: 2rem;}
     section {
         padding: 110px 10% 60px;
     }
     .about-text p {
-        color: var(--extra-light);
-        font-size: 1rem;
-        line-height: 30px;
-        margin-bottom: 2rem;
         text-align: center;
         padding: 0 10%;
     }
@@ -62,18 +48,13 @@
         font-size: .8rem;
         line-height: 20px;
     }
-
-
-    /* .services-content {
-        grid-template-columns: repeat(2, minmax(350px, auto));
-    } */
-    .contact, .request{
-        grid-template-columns: 1fr;
-    }
     
     
     .contact-form form, .request-form form {
          padding-top: 5%;
+    }
+    .contact, .request {
+            margin-top: 100px;
     }
     .cta__container { flex-direction: column; align-items: flex-start; }
     
@@ -88,23 +69,6 @@
 }
 
 @media (width < 690px) {
-    /* .hero h1 {
-        font-size: 3rem;
-    }
-
-    .hero h2 {
-        font-size: 1.5rem;
-    }
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-        padding: 10px 0;
-        border-top: 1px solid var(--extra-light);
-        border-bottom: 1px solid var(--extra-light);
-    }
-    .about-text p {
-        padding: 0 5%;
-    } */
      .services-content {
         grid-template-columns: 1fr;
      }
@@ -114,9 +78,6 @@
 }
 
 @media (width < 480px) {
-    /* section {
-        padding: 120px 10% 60px;
-    } */
     nav ul li {
         margin: 10px;
     }
@@ -128,9 +89,7 @@
      .hero h1 {
         margin-top: 280px;
     }
-    .contact, .request {
-            margin-top: 150px;
-    }
+    
     
 }
 
@@ -148,9 +107,6 @@
      .hero h1 {
         font-size:3rem;
         margin-top: 300px;
-    }
-    .contact, .request {
-            margin-top: 150px;
     }
     
 }

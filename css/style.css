@@ -139,7 +139,7 @@ nav ul li:hover a {
 
 .btn-container {
     display: flex;
-    /* gap: .6rem; */
+    gap: 1rem;
     margin-top: 20px;
 }
 

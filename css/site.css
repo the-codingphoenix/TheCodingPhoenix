@@ -571,3 +571,13 @@ textarea { min-height: 140px; resize: vertical; }
 }
 @media (max-width: 960px) { .hero-art { max-width: 480px; margin-top: 8px; } }
 .hero--home .wrap { grid-template-columns: 1fr 1fr; } @media (max-width: 960px) { .hero--home .wrap { grid-template-columns: 1fr; } }
+
+/* Bigger logo */
+.brand img { height: 84px; }
+.site-header .wrap { min-height: 96px; }
+.footer-logo img { height: 140px; width: auto; }
+@media (max-width: 620px) {
+    .brand img { height: 66px; }
+    .site-header .wrap { min-height: 80px; }
+    .footer-logo img { height: 120px; margin-inline: auto; }
+}

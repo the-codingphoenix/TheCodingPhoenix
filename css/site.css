@@ -538,3 +538,6 @@ textarea { min-height: 140px; resize: vertical; }
 .section--white { background: var(--paper); }
 :root[data-theme="dark"] .section--tint { background: #1a1213; }
 :root[data-theme="dark"] .form-status.ok { background: #16301c; color: #bfe8c8; }
+.hero--simple .lead { margin-inline: auto; }
+.footer-logo img { height: 64px; }
+.hero--simple .wrap { display: block; }

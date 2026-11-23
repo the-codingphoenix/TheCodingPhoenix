@@ -581,3 +581,8 @@ textarea { min-height: 140px; resize: vertical; }
     .site-header .wrap { min-height: 80px; }
     .footer-logo img { height: 120px; margin-inline: auto; }
 }
+
+/* Keep two-column sections balanced even if an image is slow or missing */
+.split, .form-layout, .hero .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.split img { width: 100%; }
+@media (max-width: 960px) { .split, .form-layout, .hero .wrap { grid-template-columns: minmax(0, 1fr); } }

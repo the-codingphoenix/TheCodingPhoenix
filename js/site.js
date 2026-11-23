@@ -9,6 +9,24 @@
             btn.innerHTML = open ? '<i class="ri-close-line"></i>Close' : '<i class="ri-menu-line"></i>Menu';
         });
     }
+    // Light / dark switch, remembered for next time
+    var themeBtn = document.querySelector('.theme-toggle');
+    function label() {
+        var dark = document.documentElement.getAttribute('data-theme') !== 'light';
+        if (themeBtn) themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', dark ? '#141011' : '#ffffff');
+    }
+    if (themeBtn) {
+        label();
+        themeBtn.addEventListener('click', function () {
+            var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+            label();
+        });
+    }
+
     var year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 })();
